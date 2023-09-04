@@ -171,6 +171,38 @@ int main(){
 		std::cout << shtete[i] << std::endl;
 	}
 	
+	
+	
+	
+	
+	
+	//Array multidimensionale:
+	
+	//Vektoret(Array) dydimnesionale ose multidimensionale perbehen prej dy a me shume vektore dhe perdoren per paraqitjen e grafikeve, tabelave etj. dhe perbehen prej rreshtave dhe kolonave:
+	//Ja si i krijojme keto vektore: (vektoret dydimensionale i perdorin dy pale kllapa ne definim, qe nenkuptojne rreshtat dhe kolonat, respektivisht. Nese ne nuk e dime fillimisht numrin e rreshtave , mund ta vendosim vetem ate te kolonave):
+	
+	std::string materialet[][3] = {
+								  	{"Bakri", "Argjendi", "Ari"},
+								  	{"Silici", "Germaniumi", "Galena"},
+								  	{"Qelqi", "Plastika", "Druri"}
+								  };
+	
+	//Per ti printuar elementet e kesaj array:
+	//std::cout << materialet[0][0] // Bakri
+	//std::cout << materialet[2][1] // Plastika
+	
+	//Per te treguar se si ne mund te iterojme ne nje array te tille do perdorim nje nested loop qe te llogaerisim numrin e rreshtave dhe kolonave:
+	
+	int rreshtat = sizeof(materialet)/sizeof(materialet[0]);
+	int kolonat = sizeof(materialet[0])/sizeof(materialet[0][0]);
+	
+	for(int i = 0; i < rreshtat; i++){
+		for(int j = 0; j < kolonat; j++){
+			std::cout << materialet[i][j] << " ";
+		}
+		std::cout << '\n';
+	}
+		
 	return 0;
 }
 
